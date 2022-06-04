@@ -19,3 +19,10 @@ sed "s#SCRIPT_DIR=#SCRIPT_DIR=${SCRIPT_DIR}#" superslicer.sh > /Applications/Sup
 sed -i -e "s#<string>parameterized-app.sh</string>#<string>superslicer.sh</string>#" \
 	/Applications/SuperSlicer.app/Contents/Info.plist &&
 	rm /Applications/SuperSlicer.app/Contents/Info.plist-e
+
+sed -i -e "s#klipper_estimator#klipper_estimator_$(uname)#" "$SCRIPT_DIR/print/Standard.ini" &&
+  rm "$SCRIPT_DIR/print/Standard.ini-e"
+sed -i -e "s#klipper_estimator#klipper_estimator_$(uname)#" "$SCRIPT_DIR/print/Standard.ini" &&
+	rm "$SCRIPT_DIR/print/Standard.ini-e"
+sed -i -e "s#klipper_estimator#klipper_estimator_$(uname)#" "$SCRIPT_DIR/print/Standard.ini" &&
+	rm "$SCRIPT_DIR/print/Standard.ini-e"
