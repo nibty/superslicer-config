@@ -3,8 +3,8 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd ${SCRIPT_DIR}
-git fetch --all
-git reset --hard origin/master
+#git fetch --all
+#git reset --hard origin/master
 
 sed -i -e "s#/Users/nick/projects/superslicer-configs#${SCRIPT_DIR}#g" "$SCRIPT_DIR/print/Standard.ini" &&
  rm "$SCRIPT_DIR/print/Standard.ini-e"
